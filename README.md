@@ -89,10 +89,6 @@ A Java EE web application that lets users create and generate a personal CV dyna
 - On the CV page, choose a colour theme and click **Print CV**.
 - Click **Back to Form (Edit)** to correct your data without typing everything again.
 
-## Screenshots
-
-![Sample CV](screenshots/sample-example-CV.png)
-![Dark Blue theme](screenshots/dark-blue-example-CV.png)
 
 ## Author
 
