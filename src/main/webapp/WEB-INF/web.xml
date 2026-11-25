@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+                             https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+    <display-name>Dynamic Online CV Builder</display-name>
+
+    <servlet>
+        <servlet-name>CVServlet</servlet-name>
+        <servlet-class>com.cvbuilder.controller.CVServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CVServlet</servlet-name>
+        <url-pattern>/CVServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- Filter: no-cache supaya Back button reload form dengan data dari session -->
+    <filter>
+        <filter-name>NoCacheFilter</filter-name>
+        <filter-class>com.cvbuilder.controller.NoCacheFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>NoCacheFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <welcome-file-list>
+        <welcome-file>cvForm.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
